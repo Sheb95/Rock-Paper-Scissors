@@ -46,3 +46,13 @@ else if(computerMove === 'paper' && playerMove === 'scissors'){
 }else if(computerMove && playerMove === 'paper'){
     console.log("It's a draw!");
 }
+
+// COMPUTER MOVE = SCISSORS
+
+else if( computerMove === 'scissors' && playerMove === 'rock'){
+    console.log("Player wins!");
+}else if(computerMove === 'scissors' && playerMove === 'paper'){
+    console.log("Computer wins");
+}else if(computerMove && playerMove === 'scissors'){
+    console.log("It's a draw!");
+}
