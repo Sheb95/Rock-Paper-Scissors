@@ -1,0 +1,20 @@
+Logic
+
+PLAYER MOVE = ROCK
+
+1) If playMove === rock and compMove === paper:
+    computer wins
+2) If playMove === rock and compMove === scissors:
+    player wins
+3) If playMove === rock and compMove === rock:
+    it's a draw!
+
+PLAYER MOVE = PAPER
+
+1) if playMove === paper and compMove === scissors:
+    computer winss!
+2) if playMove === paper and compMove === rock:
+    player wins!
+3) if play move === paper and compMove === paper:
+    its a draw!
+
