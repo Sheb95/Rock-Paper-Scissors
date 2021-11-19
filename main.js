@@ -1,7 +1,7 @@
 // ROCK PAPER SCISSORS 
 function userNameInputed(userName) {
     user = true
-    while(user){
+    while(user)
         userName = prompt(`What is your username? (Please enter a username less than 10 characters)`);
         if(userName.length >= 10){
             alert('Please enter a user name with less than 10 characters');
@@ -118,7 +118,7 @@ while(isGameActive === true){
         isGameActive = false;
         } 
     }
-}
+
 
     
   
