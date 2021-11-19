@@ -31,10 +31,18 @@ else if(playerMove === 'scissors' && computerMove === 'rock'){
 }
 
 //COMPUTER MOVE - ROCK
-else if(compMove === 'rock' && computerMove === 'paper'){
+else if(computerMove === 'rock' && playerMove === 'paper'){
     console.log("player Wins!");
-}else if(compMove === 'rock' && computerMove === 'scissors'){
-    console.log("player Wins!");
-}else if (compMove && computerMove ==='rock'){
+}else if(computerMove === 'rock' && playerMove === 'scissors'){
+    console.log("computer Wins!");
+}else if (computerMove && playerMove ==='rock'){
+    console.log("It's a draw!");
+}
+//COMPUTER MOVE = PAPER
+else if(computerMove === 'paper' && playerMove === 'scissors'){
+    console.log("Player wins!");
+}else if(computerMove === 'paper' && playerMove === 'rock'){
+    console.log("Computer wins");
+}else if(computerMove && playerMove === 'paper'){
     console.log("It's a draw!");
 }

@@ -1,6 +1,6 @@
 Logic
 
-PLAYER MOVE = ROCK
+PLAYER MOVE = ROCK [Done]
 
 1) If playMove === rock and compMove === paper:
     computer wins
@@ -18,7 +18,7 @@ PLAYER MOVE = PAPER [Done]
 3) if play move === paper and compMove === paper:
     its a draw!
 
-PLAY MOVE = SCISSORS 
+PLAY MOVE = SCISSORS [Done]
 
 1) if playMove === scissors and compMove === rock
     computer wins
@@ -28,7 +28,7 @@ PLAY MOVE = SCISSORS
     its a draw!
 
 
-    COMPUTER MOVE = ROCK
+    COMPUTER MOVE = ROCK [Done]
 
 1) If compMove === rock and playMove === paper:
     player wins!
@@ -37,7 +37,7 @@ PLAY MOVE = SCISSORS
 3) If compMove === rock and playMove === rock:
     it's a draw!
 
-COMPUTER MOVE = PAPER
+COMPUTER MOVE = PAPER [Done]
 
 1) if compMove === paper and playMove === scissors:
     playMove winss!
