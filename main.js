@@ -1,10 +1,11 @@
 // ROCK PAPER SCISSORS 
 function userNameInputed(userName) {
     user = true
+    userName = prompt(`What is your username? (Please enter a username less than 10 characters)`);
     while(user)
-        userName = prompt(`What is your username? (Please enter a username less than 10 characters)`);
         if(userName.length >= 10){
-            alert('Please enter a user name with less than 10 characters');
+           alert("Invalid input.");
+           userName = prompt(`What is your username? (Please enter a username less than 10 characters)`);
         } else { user = false;
                 return userName;
            
@@ -68,7 +69,7 @@ function getWinners(playerMove, computerMove) {
     else if( computerMove === 'scissors' && playerMove === 'rock'){
         console.log("Player wins!");
     }else if(computerMove === 'scissors' && playerMove === 'paper'){
-        console.log("Computer wins");
+        console.log("Computer wins!");
     }else if(computerMove && playerMove === 'scissors'){
         console.log("It's a draw!");
     }
@@ -83,6 +84,7 @@ let isGameActive = true;
 
     let playerScore = 0;
     let computerScore = 0;
+    let rounds = 0; 
 
 while(isGameActive === true){
     
@@ -93,14 +95,17 @@ while(isGameActive === true){
 
     if(result === 1){
         playerScore++;
-        alert(`${user} wins! (${user}'s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+        rounds++;
+        alert(`${user} wins round ${rounds}! (${user}'s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
         
     }else if (result === -1){
         computerScore++;
-        alert(`${user} loses (${user}s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+        rounds++;
+        alert(`${user} loses round ${rounds}! (${user}s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
         
     }else{
-        alert(`It is a draw! (${user}'s Player's score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+        alert(`It is a draw this round (${rounds})! (${user}'s Player's score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+        rounds++;
     }
 
 
