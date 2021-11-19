@@ -1,28 +1,32 @@
 // ROCK PAPER SCISSORS 
 
 
-let playerMove = "rock";
-let computerMove = "paper";
+let playerMove = "scissors";
+let computerMove = "scissors";
 
-<<<<<<< HEAD
 //playerMove = paper
 if(playerMove === 'paper' && computerMove === 'scissors'){
     console.log("computer Wins!!");
-} else if(playerMove === 'scissors' && computerMove === 'paper'){
+} else if(playerMove === 'paper' && computerMove === 'rock'){
     console.log("player Wins")
-} else{
+} else if(playerMove === 'paper' && computerMove ==='paper' ){
     console.log("It's a Draw!")
 }
-=======
+
 //playerMove = rock
-if(playerMove === 'rock' && computerMove === 'paper'){
+else if(playerMove === 'rock' && computerMove === 'paper'){
     console.log('Computer Wins!');
 }else if(playerMove === 'rock' && computerMove === 'scissors'){
     console.log('Player wins!');
-    
-
-}else{
+}else if(playerMove === 'rock' && computerMove === 'rock'){
     console.log("It's a Draw!");
-};
->>>>>>> 89bf03d449d09530cf815578bbb172ff96272021
+}
+//PLAYER MOVE - SCISSORS
+else if(playerMove === 'scissors' && computerMove === 'rock'){
+    console.log("Computer Wins!");
+}else if(playerMove === 'scissors' && computerMove === 'paper'){
+    console.log("Player Wins!");
+}else if (playerMove && computerMove ==='scissors'){
+    console.log("It's a draw!");
+}
 

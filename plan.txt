@@ -9,7 +9,7 @@ PLAYER MOVE = ROCK
 3) If playMove === rock and compMove === rock:
     it's a draw!
 
-PLAYER MOVE = PAPER
+PLAYER MOVE = PAPER [Done]
 
 1) if playMove === paper and compMove === scissors:
     computer winss!
