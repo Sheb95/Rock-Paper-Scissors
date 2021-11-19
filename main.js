@@ -1,30 +1,37 @@
 // ROCK PAPER SCISSORS 
 
+function computerChoices(){
+    let choices = ["rock", "paper", "scissors"];
+    let randomChoice = choices[Math.floor(choices.length* Math.random())];
+        return randomChoice;
+}
+
+
 function getWinners(playerMove, computerMove) {
 //playerMove = paper
     if(playerMove === 'paper' && computerMove === 'scissors'){
-        console.log("computer Wins!!");
+        return -1;
     } else if(playerMove === 'paper' && computerMove === 'rock'){
-        console.log("player Wins")
+        return 1;
     } else if(playerMove === 'paper' && computerMove ==='paper' ){
-        console.log("It's a Draw!")
+        return 0;
     }
 
     //playerMove = rock
     else if(playerMove === 'rock' && computerMove === 'paper'){
-        console.log('Computer Wins!');
+        return -1;
     }else if(playerMove === 'rock' && computerMove === 'scissors'){
-        console.log('Player wins!');
+        return 1;
     }else if(playerMove === 'rock' && computerMove === 'rock'){
-        console.log("It's a Draw!");
+        return 0;
     }
     //PLAYER MOVE - SCISSORS
     else if(playerMove === 'scissors' && computerMove === 'rock'){
-        console.log("Computer Wins!");
+        return -1
     }else if(playerMove === 'scissors' && computerMove === 'paper'){
-        console.log("Player Wins!");
+        return 1
     }else if (playerMove && computerMove ==='scissors'){
-        console.log("It's a draw!");
+        return 0
     }
 
     //COMPUTER MOVE - ROCK
@@ -55,6 +62,19 @@ function getWinners(playerMove, computerMove) {
     }
 }
 
-let result = getWinners("scissors", "scissors");
+let computer = computerChoices();
+console.log(computer);
+
+/*let userInput = prompt("Rock, paper or scissors?")
+let result = getWinners(userInput, "scissors");
+
+if(result === 1){
+    alert("Player 1 wins!");
+}else if (result === -1){
+    alert("Player 1 is a big loser!");
+}else{
+    alert("It is a draw!");
+}*/
+
 
 
