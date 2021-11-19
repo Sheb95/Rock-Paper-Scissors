@@ -1,4 +1,16 @@
 // ROCK PAPER SCISSORS 
+function userNameInputed(userName) {
+    user = true
+    while(user){
+        userName = prompt(`What is your username? (Please enter a username less than 10 characters)`);
+        if(userName.length >= 10){
+            alert('Please enter a user name with less than 10 characters');
+        } else { user = false;
+                return userName;
+           
+    }
+
+}
 
 function computerChoices(){
     let choices = ["rock", "paper", "scissors"];
@@ -62,19 +74,53 @@ function getWinners(playerMove, computerMove) {
     }
 }
 
-let computer = computerChoices();
-console.log(computer);
 
-/*let userInput = prompt("Rock, paper or scissors?")
-let result = getWinners(userInput, "scissors");
 
-if(result === 1){
-    alert("Player 1 wins!");
-}else if (result === -1){
-    alert("Player 1 is a big loser!");
-}else{
-    alert("It is a draw!");
-}*/
+user = userNameInputed();
 
+
+let isGameActive = true;
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+while(isGameActive === true){
+    
+    let computer = computerChoices();
+
+    let userInput = prompt("Rock, paper or scissors?")
+    let result = getWinners(userInput, computer);
+
+    if(result === 1){
+        playerScore++;
+        alert(`${user} wins! (${user}'s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+        
+    }else if (result === -1){
+        computerScore++;
+        alert(`${user} loses (${user}s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+        
+    }else{
+        alert(`It is a draw! (${user}'s Player's score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+    }
+
+
+    let repeatGame = prompt("Would you like to play again?");
+        if(repeatGame === 'no'){
+            alert('Thanks for playing');
+            if(playerScore > computerScore){
+                alert(`${user} wins! (Final score: ${user}'s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+            }else if (playerScore < computerScore){
+                alert(`Computer wins! (Final score: ${user}'s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+
+            }else{
+                alert(`It's a draw! ${user}'s score: ${playerScore} points, Computer's score: ${computerScore} points.)`);
+            }
+        isGameActive = false;
+        } 
+    }
+}
+
+    
+  
 
 
