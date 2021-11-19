@@ -18,3 +18,11 @@ PLAYER MOVE = PAPER
 3) if play move === paper and compMove === paper:
     its a draw!
 
+PLAY MOVE = SCISSORS 
+
+1) if playMove === scissors and compMove === rock
+    computer wins
+1) if playMove === scissors and compMove === paper
+    player wins
+1) if playMove === scissors and compMove === scissors
+    its a draw!
